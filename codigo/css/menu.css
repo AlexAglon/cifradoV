@@ -1,0 +1,82 @@
+/*configuracion del contenedor padre*/
+#menu{
+    height: 80px;
+    background: black;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*logo*/
+#logo{
+    margin-left: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+/*opciones del menu*/
+#options{
+    width: 350px;
+    height: 40px;
+    margin-right: 20px;
+    /*border: 1px white solid;*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*botones del menu*/
+#inicio-B,#log-in-B,#sign-in-B{
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*estilos compartidos de log y sign*/
+#log-in-B,#sign-in-B{
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#inicio-B:hover{
+    transition: 0.7s;
+    color: rgb(92,186,81);
+    font-weight: 500;
+}
+
+#log-in-B:hover,#sign-in-B:hover{
+    transition: 0.7s;
+    color:white;
+    background: rgb(92,186,81);
+    font-weight: 500;
+    
+}
+
+
+/*botones de inicio de sesion*/
+#log-in-B{
+    background: rgb(233, 233, 233);
+    color: black;
+    width: 120px;
+}
+
+
+#sign-in-B{
+    background: rgb(42, 41, 41);
+    color: white;
+    width: 100px;
+}
+
+
+
+

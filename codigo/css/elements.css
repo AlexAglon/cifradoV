@@ -1,0 +1,23 @@
+/*contenedor padre*/
+#f-section{
+    width: 100%;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*contenedor de las tarjetas*/
+#cont-element{
+    background: rgba(42, 41, 41, 0.5);
+    color: white;
+    width: 1000px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*tarjetas */
