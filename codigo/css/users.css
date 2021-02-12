@@ -33,7 +33,9 @@ main{
     background: black;
 }
 
-
+#texto-imagen{
+    width: 250px;
+}
 /*contenedor de nuestro formulario e imagen*/
 #register{
     width:70vw;
@@ -58,13 +60,18 @@ main{
 #form-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
+
 /*elementos de nuestro formulario*/
 #form-container #form{
+    margin-top: -20%;
     padding: 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #name-f,#lastname-f{
