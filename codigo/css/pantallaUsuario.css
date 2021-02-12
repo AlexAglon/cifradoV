@@ -48,3 +48,36 @@ body{
     border-radius: 5px;
     display: none;
 }
+
+.form-mensaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    #mensajes{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .form-mensaje{
+        margin: 0;
+    }
+    .card-decifrado, #cont-msj{
+        width: 95%;
+        overflow: scroll;
+    }
+}
+
+.header-logout{
+    height: 45px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    background-color: black;
+    padding-right: 15px;
+}
