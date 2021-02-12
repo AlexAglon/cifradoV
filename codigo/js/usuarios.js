@@ -59,20 +59,17 @@ function decifrarMensaje(){
     
     // Limpiamos el contenedor de los mensajes
     let contenedorMensajes = document.getElementById("cont-msj");
-    let br = document.createElement("br");
-    let elementos = contenedorMensajes.children;
-    for(children of elementos){
-        contenedorMensajes.replaceChild(br,children)
-    }
-
     
+    contenedorMensajes.style.display = "none";
     // Verificar contraseña
     let verifyPassword = prompt("Confirma tu contraseña");
     if (verifyPassword === usuario.password){
         for (let mensaje of usuario.mensajes) {
             let llaveE = repiteLlave(mensaje, llave);
             mensaje = desencriptaVigenere(mensaje, llaveE)        
-            let contM = document.getElementById("cont-msj");
+            let contM = document.getElementById("cont-decifra");
+            contM.style.display = "block";
+            console.log(contM.style);
             let card = document.createElement("div");
             card.setAttribute("class","card");
     
