@@ -1,3 +1,4 @@
+/*contenedor de footer*/
 footer{
     background: black;
     color: white;
@@ -9,13 +10,14 @@ footer{
     align-items: center;
 }
 
+/*cada elemento del footer*/
 .footer-ele{
+    text-align: left;
     height: 180px;
     width: 300px;
-    
-    
 }
 
-.footer-ele:nth-child(1),.footer-ele:nth-child(2){
-    border-right: 1px solid white;
+/*cada elemento p de nuestros elementos*/
+.footer-ele p{
+    text-align: center;
 }
