@@ -60,7 +60,7 @@ main{
     flex-direction: column;
 }
 /*elementos de nuestro formulario*/
-#form-container form{
+#form-container #form{
     padding: 15px;
     display: flex;
     flex-direction: row;
