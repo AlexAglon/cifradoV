@@ -41,8 +41,6 @@ function repiteLlave(mensajeSinESpacio,llave) {
 
 /*encriptado*/
 /*Se usa la formula (Xi+Ci) mod L */
-
-
 function Vigenere(mensajeSinESpacio,llaveE) {
     let mensajeEncriptado = "",posicion = 0;
     for (let index in mensajeSinESpacio) {
@@ -124,11 +122,6 @@ function AgregaUsuario(){
 }
 
 
-
-
-/*funcion que desencripta los mensajes */
-
-
 /*funcion para validar si existe el usuario y la contraseña dada*/
 function verificarUsuario(){
     //recibimos los datos introducidos por el usuario
@@ -151,7 +144,7 @@ function verificarUsuario(){
         contador ++;
     }
 }
-
+ 
 
 
 
