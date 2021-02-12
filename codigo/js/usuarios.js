@@ -46,7 +46,42 @@ function agregaMensajes() {
     location.reload();
 }
 
+
+function decifrarMensaje(){
+    let contador = localStorage.getItem("cont");
+    contador = JSON.parse(contador);
+
+    //sacamos los datos de nuestro local storage 
+    let arr = localStorage.getItem("arrUsuarios");
+    arr = JSON.parse(arr);
+
+    let usuario = arr[contador];
+    
+    // Limpiamos el contenedor de los mensajes
+    let contenedorMensajes = document.getElementById("cont-msj");
+    contenedorMensajes.replaceChildren();
+    
+    // Verificar contraseña
+    let verifyPassword = prompt("Confirma tu contraseña");
+    if (verifyPassword === usuario.password){
+        for (let mensaje of usuario.mensajes) {
+            let llaveE = repiteLlave(mensaje, llave);
+            mensaje = desencriptaVigenere(mensaje, llaveE)        
+            let contM = document.getElementById("cont-msj");
+            let card = document.createElement("div");
+            card.setAttribute("class","card");
+    
+            card.append(mensaje);
+            contM.append(card);
+        }   
+    } 
+    // Si la contraseña es incorrecta recarga la pagina y lanza una alerta
+    else{
+        location.reload()
+        alert("Ingresaste una contraseña incorrecta")
+    }
+}
+
+
+
 muestraMensajes();
-
-
-
