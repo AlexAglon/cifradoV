@@ -56,6 +56,8 @@ function decifrarMensaje(){
     arr = JSON.parse(arr);
 
     let usuario = arr[contador];
+    
+    // Limpiamos el contenedor de los mensajes
     let contenedorMensajes = document.getElementById("cont-msj");
     contenedorMensajes.replaceChildren();
     
@@ -73,6 +75,7 @@ function decifrarMensaje(){
             contM.append(card);
         }   
     } 
+    // Si la contraseña es incorrecta recarga la pagina y lanza una alerta
     else{
         location.reload()
         alert("Ingresaste una contraseña incorrecta")
