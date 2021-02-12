@@ -81,11 +81,34 @@ function guardaLS(usuario){
     //recibimos el localstorage
     let array = localStorage.getItem("arrUsuarios");
     array = JSON.parse(array);
+    
+    //bandera para indicaros si existe el usuario
+    let flag = false;
+    //nombre del usuario que queremos agregar
+    let usrn = usuario.username;
 
-    //agregamos el usuario a nuestro arreglo
-    array.push(usuario);
-    //guardamos los cambios en el local storage
-    localStorage.setItem("arrUsuarios",JSON.stringify(array));
+    //recorremos todo nuestro arreglo en busca del usuario
+    for (let us of array) {
+        if (us.username === usrn) {
+            flag = true;//el usuario existe
+        }
+    }
+
+    //para ver si agregamos o no
+    //si existe el usuario
+    if (flag === true) {
+        alert("El nombre de usuario ya existe");
+        location.reload();
+    }else{
+        //agregamos el usuario a nuestro arreglo
+        array.push(usuario);
+        //guardamos los cambios en el local storage
+        localStorage.setItem("arrUsuarios",JSON.stringify(array));
+
+        alert("usuario registrado con exito seras redirigido a la pantalla de inicio de sesion");
+        location.assign("inicioS.html");
+    }
+    
 }
 
 
@@ -116,8 +139,7 @@ function AgregaUsuario(){
     };    
 
     guardaLS(usuario);
-    alert("usuario registrado con exito seras redirigido a la pantalla de inicio de sesion");
-    location.assign("inicioS.html");
+    
     
 }
 
