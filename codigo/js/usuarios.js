@@ -13,7 +13,7 @@ function muestraMensajes() {
 
     for (let mensaje of usuario.mensajes) {
         let contM = document.getElementById("cont-msj");
-        let card = document.createElement("div");
+        let card = document.createElement("p");
         card.setAttribute("class","card");
 
         card.append(mensaje);
@@ -70,7 +70,7 @@ function decifrarMensaje(){
             let contM = document.getElementById("cont-decifra");
             contM.style.display = "block";
             console.log(contM.style);
-            let card = document.createElement("div");
+            let card = document.createElement("p");
             card.setAttribute("class","card");
     
             card.append(mensaje);
@@ -85,6 +85,9 @@ function decifrarMensaje(){
     }
 }
 
-
+function logout(){
+    localStorage.removeItem("cont");
+    location.assign("index.html");
+}
 
 muestraMensajes();
