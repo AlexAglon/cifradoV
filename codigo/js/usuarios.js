@@ -59,7 +59,12 @@ function decifrarMensaje(){
     
     // Limpiamos el contenedor de los mensajes
     let contenedorMensajes = document.getElementById("cont-msj");
-    contenedorMensajes.replaceChildren();
+    let br = document.createElement("br");
+    let elementos = contenedorMensajes.children;
+    for(children of elementos){
+        contenedorMensajes.replaceChild(br,children)
+    }
+
     
     // Verificar contraseña
     let verifyPassword = prompt("Confirma tu contraseña");
@@ -75,7 +80,7 @@ function decifrarMensaje(){
             contM.append(card);
         }   
     } 
-    
+
     // Si la contraseña es incorrecta recarga la pagina y lanza una alerta
     else{
         location.reload()
