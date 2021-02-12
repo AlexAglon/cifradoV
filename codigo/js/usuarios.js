@@ -75,6 +75,7 @@ function decifrarMensaje(){
             contM.append(card);
         }   
     } 
+    
     // Si la contraseña es incorrecta recarga la pagina y lanza una alerta
     else{
         location.reload()
